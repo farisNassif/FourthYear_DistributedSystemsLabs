@@ -631,7 +631,6 @@ public final class AddressBookProtos {
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
-      @java.lang.Override
       public Builder newBuilderForType() { return newBuilder(); }
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
@@ -639,7 +638,7 @@ public final class AddressBookProtos {
       public static Builder newBuilder(ie.gmit.ds.AddressBookProtos.Person.PhoneNumber prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
-      @java.lang.Override
+      
       public Builder toBuilder() {
         return this == DEFAULT_INSTANCE
             ? new Builder() : new Builder().mergeFrom(this);
@@ -702,12 +701,12 @@ public final class AddressBookProtos {
           return ie.gmit.ds.AddressBookProtos.internal_static_gmit_ds_Person_PhoneNumber_descriptor;
         }
 
-        @java.lang.Override
+        
         public ie.gmit.ds.AddressBookProtos.Person.PhoneNumber getDefaultInstanceForType() {
           return ie.gmit.ds.AddressBookProtos.Person.PhoneNumber.getDefaultInstance();
         }
 
-        @java.lang.Override
+        
         public ie.gmit.ds.AddressBookProtos.Person.PhoneNumber build() {
           ie.gmit.ds.AddressBookProtos.Person.PhoneNumber result = buildPartial();
           if (!result.isInitialized()) {
@@ -716,7 +715,7 @@ public final class AddressBookProtos {
           return result;
         }
 
-        @java.lang.Override
+        
         public ie.gmit.ds.AddressBookProtos.Person.PhoneNumber buildPartial() {
           ie.gmit.ds.AddressBookProtos.Person.PhoneNumber result = new ie.gmit.ds.AddressBookProtos.Person.PhoneNumber(this);
           int from_bitField0_ = bitField0_;
@@ -959,7 +958,7 @@ public final class AddressBookProtos {
 
       @java.lang.Deprecated public static final com.google.protobuf.Parser<PhoneNumber>
           PARSER = new com.google.protobuf.AbstractParser<PhoneNumber>() {
-        @java.lang.Override
+        
         public PhoneNumber parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -977,7 +976,7 @@ public final class AddressBookProtos {
         return PARSER;
       }
 
-      @java.lang.Override
+      
       public ie.gmit.ds.AddressBookProtos.Person.PhoneNumber getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
@@ -1316,7 +1315,7 @@ public final class AddressBookProtos {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1324,7 +1323,7 @@ public final class AddressBookProtos {
     public static Builder newBuilder(ie.gmit.ds.AddressBookProtos.Person prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1396,12 +1395,12 @@ public final class AddressBookProtos {
         return ie.gmit.ds.AddressBookProtos.internal_static_gmit_ds_Person_descriptor;
       }
 
-      @java.lang.Override
+      
       public ie.gmit.ds.AddressBookProtos.Person getDefaultInstanceForType() {
         return ie.gmit.ds.AddressBookProtos.Person.getDefaultInstance();
       }
 
-      @java.lang.Override
+      
       public ie.gmit.ds.AddressBookProtos.Person build() {
         ie.gmit.ds.AddressBookProtos.Person result = buildPartial();
         if (!result.isInitialized()) {
@@ -1410,7 +1409,7 @@ public final class AddressBookProtos {
         return result;
       }
 
-      @java.lang.Override
+      
       public ie.gmit.ds.AddressBookProtos.Person buildPartial() {
         ie.gmit.ds.AddressBookProtos.Person result = new ie.gmit.ds.AddressBookProtos.Person(this);
         int from_bitField0_ = bitField0_;
@@ -2016,7 +2015,7 @@ public final class AddressBookProtos {
 
     @java.lang.Deprecated public static final com.google.protobuf.Parser<Person>
         PARSER = new com.google.protobuf.AbstractParser<Person>() {
-      @java.lang.Override
+      
       public Person parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2034,7 +2033,7 @@ public final class AddressBookProtos {
       return PARSER;
     }
 
-    @java.lang.Override
+    
     public ie.gmit.ds.AddressBookProtos.Person getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2338,7 +2337,7 @@ public final class AddressBookProtos {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2346,13 +2345,13 @@ public final class AddressBookProtos {
     public static Builder newBuilder(ie.gmit.ds.AddressBookProtos.AddressBook prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
@@ -2412,12 +2411,12 @@ public final class AddressBookProtos {
         return ie.gmit.ds.AddressBookProtos.internal_static_gmit_ds_AddressBook_descriptor;
       }
 
-      @java.lang.Override
+      
       public ie.gmit.ds.AddressBookProtos.AddressBook getDefaultInstanceForType() {
         return ie.gmit.ds.AddressBookProtos.AddressBook.getDefaultInstance();
       }
 
-      @java.lang.Override
+      
       public ie.gmit.ds.AddressBookProtos.AddressBook build() {
         ie.gmit.ds.AddressBookProtos.AddressBook result = buildPartial();
         if (!result.isInitialized()) {
@@ -2426,7 +2425,7 @@ public final class AddressBookProtos {
         return result;
       }
 
-      @java.lang.Override
+      
       public ie.gmit.ds.AddressBookProtos.AddressBook buildPartial() {
         ie.gmit.ds.AddressBookProtos.AddressBook result = new ie.gmit.ds.AddressBookProtos.AddressBook(this);
         int from_bitField0_ = bitField0_;
@@ -2815,7 +2814,7 @@ public final class AddressBookProtos {
 
     @java.lang.Deprecated public static final com.google.protobuf.Parser<AddressBook>
         PARSER = new com.google.protobuf.AbstractParser<AddressBook>() {
-      @java.lang.Override
+      
       public AddressBook parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2833,7 +2832,7 @@ public final class AddressBookProtos {
       return PARSER;
     }
 
-    @java.lang.Override
+    
     public ie.gmit.ds.AddressBookProtos.AddressBook getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
