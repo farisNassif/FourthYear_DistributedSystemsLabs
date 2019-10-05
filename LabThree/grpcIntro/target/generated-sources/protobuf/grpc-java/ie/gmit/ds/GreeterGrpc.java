@@ -61,6 +61,37 @@ public final class GreeterGrpc {
     return getSayHelloMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<ie.gmit.ds.HelloRequest,
+      ie.gmit.ds.HelloReply> getSayHelloAgainMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SayHelloAgain",
+      requestType = ie.gmit.ds.HelloRequest.class,
+      responseType = ie.gmit.ds.HelloReply.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<ie.gmit.ds.HelloRequest,
+      ie.gmit.ds.HelloReply> getSayHelloAgainMethod() {
+    io.grpc.MethodDescriptor<ie.gmit.ds.HelloRequest, ie.gmit.ds.HelloReply> getSayHelloAgainMethod;
+    if ((getSayHelloAgainMethod = GreeterGrpc.getSayHelloAgainMethod) == null) {
+      synchronized (GreeterGrpc.class) {
+        if ((getSayHelloAgainMethod = GreeterGrpc.getSayHelloAgainMethod) == null) {
+          GreeterGrpc.getSayHelloAgainMethod = getSayHelloAgainMethod =
+              io.grpc.MethodDescriptor.<ie.gmit.ds.HelloRequest, ie.gmit.ds.HelloReply>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SayHelloAgain"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ie.gmit.ds.HelloRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ie.gmit.ds.HelloReply.getDefaultInstance()))
+              .setSchemaDescriptor(new GreeterMethodDescriptorSupplier("SayHelloAgain"))
+              .build();
+        }
+      }
+    }
+    return getSayHelloAgainMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -101,6 +132,13 @@ public final class GreeterGrpc {
       asyncUnimplementedUnaryCall(getSayHelloMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void sayHelloAgain(ie.gmit.ds.HelloRequest request,
+        io.grpc.stub.StreamObserver<ie.gmit.ds.HelloReply> responseObserver) {
+      asyncUnimplementedUnaryCall(getSayHelloAgainMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -110,6 +148,13 @@ public final class GreeterGrpc {
                 ie.gmit.ds.HelloRequest,
                 ie.gmit.ds.HelloReply>(
                   this, METHODID_SAY_HELLO)))
+          .addMethod(
+            getSayHelloAgainMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                ie.gmit.ds.HelloRequest,
+                ie.gmit.ds.HelloReply>(
+                  this, METHODID_SAY_HELLO_AGAIN)))
           .build();
     }
   }
@@ -145,6 +190,14 @@ public final class GreeterGrpc {
       asyncUnaryCall(
           getChannel().newCall(getSayHelloMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void sayHelloAgain(ie.gmit.ds.HelloRequest request,
+        io.grpc.stub.StreamObserver<ie.gmit.ds.HelloReply> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getSayHelloAgainMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -176,6 +229,13 @@ public final class GreeterGrpc {
     public ie.gmit.ds.HelloReply sayHello(ie.gmit.ds.HelloRequest request) {
       return blockingUnaryCall(
           getChannel(), getSayHelloMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public ie.gmit.ds.HelloReply sayHelloAgain(ie.gmit.ds.HelloRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getSayHelloAgainMethod(), getCallOptions(), request);
     }
   }
 
@@ -210,9 +270,18 @@ public final class GreeterGrpc {
       return futureUnaryCall(
           getChannel().newCall(getSayHelloMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<ie.gmit.ds.HelloReply> sayHelloAgain(
+        ie.gmit.ds.HelloRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getSayHelloAgainMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_SAY_HELLO = 0;
+  private static final int METHODID_SAY_HELLO_AGAIN = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -233,6 +302,10 @@ public final class GreeterGrpc {
       switch (methodId) {
         case METHODID_SAY_HELLO:
           serviceImpl.sayHello((ie.gmit.ds.HelloRequest) request,
+              (io.grpc.stub.StreamObserver<ie.gmit.ds.HelloReply>) responseObserver);
+          break;
+        case METHODID_SAY_HELLO_AGAIN:
+          serviceImpl.sayHelloAgain((ie.gmit.ds.HelloRequest) request,
               (io.grpc.stub.StreamObserver<ie.gmit.ds.HelloReply>) responseObserver);
           break;
         default:
@@ -297,6 +370,7 @@ public final class GreeterGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new GreeterFileDescriptorSupplier())
               .addMethod(getSayHelloMethod())
+              .addMethod(getSayHelloAgainMethod())
               .build();
         }
       }

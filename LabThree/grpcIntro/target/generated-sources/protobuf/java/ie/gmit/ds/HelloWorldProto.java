@@ -35,9 +35,10 @@ public final class HelloWorldProto {
     java.lang.String[] descriptorData = {
       "\n\020helloworld.proto\"\034\n\014HelloRequest\022\014\n\004na" +
       "me\030\001 \001(\t\"\035\n\nHelloReply\022\017\n\007message\030\001 \001(\t2" +
-      "3\n\007Greeter\022(\n\010SayHello\022\r.HelloRequest\032\013." +
-      "HelloReply\"\000B\037\n\nie.gmit.dsB\017HelloWorldPr" +
-      "otoP\001b\006proto3"
+      "b\n\007Greeter\022(\n\010SayHello\022\r.HelloRequest\032\013." +
+      "HelloReply\"\000\022-\n\rSayHelloAgain\022\r.HelloReq" +
+      "uest\032\013.HelloReply\"\000B\037\n\nie.gmit.dsB\017Hello" +
+      "WorldProtoP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
