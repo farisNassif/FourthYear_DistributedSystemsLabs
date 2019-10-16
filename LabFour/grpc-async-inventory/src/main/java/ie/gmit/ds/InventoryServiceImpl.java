@@ -3,6 +3,10 @@ package ie.gmit.ds;
 import java.util.ArrayList;
 import java.util.logging.Logger;
 
+import com.google.protobuf.BoolValue;
+
+import io.grpc.stub.StreamObserver;
+
 public class InventoryServiceImpl extends InventoryServiceGrpc.InventoryServiceImplBase {
 	  private ArrayList<Item> itemsList;
 	    private static final Logger logger =
